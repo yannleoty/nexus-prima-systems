@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Nexus Prima Systems</title>
+
+  <meta
+    name="description"
+    content="Nexus Prima Systems builds practical automation and intelligent workflows for hospitality businesses."
+  >
+
+  <style>
+    :root {
+      --background: #050505;
+      --surface: #0d0d0f;
+      --text: #f4f4f4;
+      --muted: #a6a6ab;
+      --border: #26262b;
+      --red: #d63c46;
+      --max-width: 1080px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--background);
+      color: var(--text);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 40px, var(--max-width));
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(5, 5, 5, 0.92);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(12px);
+    }
+
+    nav {
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .symbol {
+      width: 40px;
+      height: 40px;
+      flex: 0 0 auto;
+    }
+
+    .wordmark {
+      font-size: 0.9rem;
+      letter-spacing: 0.28rem;
+      white-space: nowrap;
+    }
+
+    .wordmark span {
+      color: var(--red);
+    }
+
+    .nav-link {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .nav-link:hover {
+      color: var(--text);
+    }
+
+    section {
+      padding: 96px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero {
+      min-height: calc(100vh - 80px);
+      display: flex;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--red);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22rem;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      max-width: 850px;
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.06em;
+      font-weight: 500;
+    }
+
+    h2 {
+      max-width: 720px;
+      font-size: clamp(2rem, 5vw, 3.8rem);
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      font-weight: 500;
+      margin-bottom: 30px;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-copy {
+      max-width: 710px;
+      margin-top: 32px;
+      font-size: 1.2rem;
+    }
+
+    .button {
+      display: inline-flex;
+      margin-top: 38px;
+      padding: 15px 22px;
+      background: var(--red);
+      color: white;
+      border: 1px solid var(--red);
+      border-radius: 2px;
+      font-weight: 700;
+      transition: 0.2s ease;
+    }
+
+    .button:hover {
+      background: transparent;
+    }
+
+    .intro {
+      max-width: 760px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      margin-top: 44px;
+      background: var(--border);
+      border: 1px solid var(--border);
+    }
+
+    .card {
+      min-height: 190px;
+      padding: 30px;
+      background: var(--surface);
+    }
+
+    .steps {
+      display: grid;
+      gap: 0;
+      margin-top: 40px;
+      border-top: 1px solid var(--border);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      padding: 25px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .step-number {
+      color: var(--red);
+      letter-spacing: 0.15rem;
+    }
+
+    .principle {
+      margin-top: 45px;
+      padding-left: 22px;
+      border-left: 2px solid var(--red);
+      color: var(--text);
+      font-size: clamp(1.3rem, 3vw, 2rem);
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-top: 32px;
+    }
+
+    .text-link {
+      padding-bottom: 4px;
+      border-bottom: 1px solid var(--red);
+    }
+
+    footer {
+      padding: 50px 0;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 30px;
+    }
+
+    .footer-copy {
+      margin-top: 12px;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 700px) {
+      nav {
+        min-height: 72px;
+      }
+
+      .wordmark {
+        font-size: 0.72rem;
+        letter-spacing: 0.18rem;
+      }
+
+      .nav-link {
+        display: none;
+      }
+
+      section {
+        padding: 76px 0;
+      }
+
+      .hero {
+        min-height: calc(90vh - 72px);
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .step {
+        grid-template-columns: 50px 1fr;
+      }
+
+      .footer-content {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <nav class="container">
+      <a class="brand" href="#top" aria-label="Nexus Prima Systems home">
+
+        <svg
+          class="symbol"
+          viewBox="0 0 100 100"
+          role="img"
+          aria-label="Nexus Prima symbol"
+        >
+          <circle
+            cx="50"
+            cy="50"
+            r="44"
+            fill="none"
+            stroke="#505057"
+            stroke-width="3"
+          />
+
+          <polygon
+            points="50,7 87,28 87,72 50,93 13,72 13,28"
+            fill="none"
+            stroke="#f4f4f4"
+            stroke-width="4"
+          />
+
+          <polygon
+            points="50,27 70,39 70,61 50,73 30,61 30,39"
+            fill="none"
+            stroke="#b8b8bd"
+            stroke-width="4"
+          />
+
+          <circle cx="50" cy="50" r="8" fill="#d63c46"/>
+        </svg>
+
+        <div class="wordmark">
+          NEXUS <span>PRIMA</span> SYSTEMS
+        </div>
+      </a>
+
+      <a class="nav-link" href="#contact">Discuss a problem</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">Nexus Prima Systems</div>
+
+        <h1>Practical systems for real operations.</h1>
+
+        <p class="hero-copy">
+          Nexus Prima Systems helps hospitality businesses reduce repetitive
+          work, improve coordination and respond faster through automation
+          and intelligent workflows.
+        </p>
+
+        <a class="button" href="#contact">Discuss a business problem</a>
+      </div>
+    </section>
+
+    <section id="problems">
+      <div class="container">
+        <div class="eyebrow">What we solve</div>
+
+        <div class="intro">
+          <h2>Less repetition. More reliable operations.</h2>
+
+          <p>
+            Hospitality teams lose time managing enquiries, reservations,
+            customer follow-up, internal communication and reporting.
+          </p>
+
+          <p style="margin-top: 18px;">
+            We build focused systems that make these processes simpler and
+            more reliable.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="solutions">
+      <div class="container">
+        <div class="eyebrow">What we build</div>
+
+        <h2>Focused solutions around the way your business works.</h2>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Customer enquiries</h3>
+            <p>Organise requests and support faster responses.</p>
+          </article>
+
+          <article class="card">
+            <h3>Reservations</h3>
+            <p>Collect information and structure booking workflows.</p>
+          </article>
+
+          <article class="card">
+            <h3>Internal operations</h3>
+            <p>Connect teams, tools and recurring tasks.</p>
+          </article>
+
+          <article class="card">
+            <h3>Reporting and follow-up</h3>
+            <p>Create clearer summaries and improve customer communication.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="process">
+      <div class="container">
+        <div class="eyebrow">How it works</div>
+
+        <h2>From one operational problem to one practical system.</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">01</div>
+            <div>
+              <h3>Identify the problem</h3>
+              <p>Understand the process that consumes unnecessary time.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">02</div>
+            <div>
+              <h3>Build a focused solution</h3>
+              <p>Create a system around the real operational workflow.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">03</div>
+            <div>
+              <h3>Test it in real operations</h3>
+              <p>Observe how it performs in the working environment.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="step-number">04</div>
+            <div>
+              <h3>Improve it using feedback</h3>
+              <p>Refine the system around measurable results.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="principle">
+          One real problem. One focused solution. One measurable improvement.
+        </div>
+      </div>
+    </section>
+
+    <section id="field">
+      <div class="container">
+        <div class="eyebrow">Our first field</div>
+
+        <h2>Built first for hospitality.</h2>
+
+        <div class="intro">
+          <p>
+            We currently work with restaurants, bars, hotels and tourism
+            businesses.
+          </p>
+
+          <p style="margin-top: 18px;">
+            Hospitality is our first field because we understand its daily
+            operations directly. The capabilities developed here can later
+            extend into other industries and more advanced systems.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="nexus">
+      <div class="container">
+        <div class="eyebrow">Part of Nexus Prima</div>
+
+        <h2>Understanding complex systems. Building better ones.</h2>
+
+        <div class="intro">
+          <p>
+            The Nexus Prima Journal explores civilisation, science,
+            artificial intelligence and space.
+          </p>
+
+          <p style="margin-top: 18px;">
+            Nexus Prima Systems applies the same systems approach to practical
+            organisational problems.
+          </p>
+        </div>
+
+        <div class="links">
+          <a class="text-link" href="https://nexusprima.org">
+            Visit Nexus Prima
+          </a>
+
+          <a class="text-link" href="https://journal.nexusprima.org">
+            Read the Journal
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="eyebrow">Request a pilot</div>
+
+        <h2>What repetitive process slows your business down?</h2>
+
+        <div class="intro">
+          <p>
+            Tell us what currently takes too much time. We will explore whether
+            a practical system can improve it.
+          </p>
+        </div>
+
+        <a
+          class="button"
+          href="mailto:systems@nexusprima.org?subject=Nexus%20Prima%20Systems%20Pilot"
+        >
+          systems@nexusprima.org
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container footer-content">
+      <div>
+        <div class="wordmark">
+          NEXUS <span>PRIMA</span> SYSTEMS
+        </div>
+
+        <p class="footer-copy">
+          Practical systems for real operations.
+        </p>
+      </div>
+
+      <p class="footer-copy">© 2026 Nexus Prima</p>
+    </div>
+  </footer>
+
+</body>
+</html>
