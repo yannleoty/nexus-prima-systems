@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Practical automation and intelligent workflows for hospitality businesses."
+    content="Nexus Prima Systems builds focused automation systems for hospitality operations."
   >
 
   <style>
@@ -94,12 +94,12 @@
     }
 
     section {
-      padding: 90px 0;
+      padding: 84px 0;
       border-bottom: 1px solid var(--border);
     }
 
     .hero {
-      min-height: calc(100vh - 80px);
+      min-height: calc(88vh - 80px);
       display: flex;
       align-items: center;
     }
@@ -122,7 +122,7 @@
     }
 
     h2 {
-      max-width: 760px;
+      max-width: 780px;
       font-size: clamp(2rem, 5vw, 3.8rem);
       line-height: 1.05;
       letter-spacing: -0.04em;
@@ -164,9 +164,17 @@
       background: var(--red);
     }
 
+    .process {
+      margin-top: 34px;
+      color: var(--text);
+      font-size: 0.95rem;
+      letter-spacing: 0.08rem;
+      text-transform: uppercase;
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1px;
       margin-top: 42px;
       background: var(--border);
@@ -179,11 +187,14 @@
       background: var(--surface);
     }
 
+    .links-section {
+      padding: 38px 0;
+    }
+
     .links {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-top: 30px;
+      gap: 24px;
     }
 
     .text-link {
@@ -196,15 +207,27 @@
     }
 
     .footer-content {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-end;
-      gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 34px;
     }
 
     .footer-copy {
       margin-top: 12px;
       font-size: 0.9rem;
+    }
+
+    .legal {
+      padding-top: 26px;
+      border-top: 1px solid var(--border);
+      color: #77777d;
+      font-size: 0.78rem;
+      line-height: 1.7;
+    }
+
+    .legal strong {
+      color: #9a9aa0;
+      font-weight: 600;
     }
 
     @media (max-width: 700px) {
@@ -222,20 +245,23 @@
       }
 
       section {
-        padding: 72px 0;
+        padding: 68px 0;
       }
 
       .hero {
-        min-height: calc(90vh - 72px);
+        min-height: calc(82vh - 72px);
       }
 
       .grid {
         grid-template-columns: 1fr;
       }
 
-      .footer-content {
-        align-items: flex-start;
-        flex-direction: column;
+      .links-section {
+        padding: 30px 0;
+      }
+
+      .process {
+        line-height: 1.9;
       }
     }
   </style>
@@ -285,7 +311,7 @@
       </a>
 
       <a class="nav-link" href="#contact">
-        Discuss a problem
+        Request a pilot
       </a>
     </nav>
   </header>
@@ -299,83 +325,61 @@
         <h1>Practical systems for real operations.</h1>
 
         <p class="hero-copy">
-          Nexus Prima Systems helps hospitality businesses reduce repetitive
-          work, improve coordination and respond faster through automation
-          and intelligent workflows.
+          Nexus Prima Systems builds focused automation systems for
+          hospitality operations.
         </p>
 
         <a class="button" href="#contact">
-          Discuss a business problem
+          Request a pilot
         </a>
       </div>
     </section>
 
     <section>
       <div class="container">
-        <div class="eyebrow">What we solve</div>
+        <div class="eyebrow">Hotel Enquiry Assistant</div>
 
         <div class="intro">
-          <h2>Simpler and more reliable operations.</h2>
+          <h2>Handle hotel enquiries faster, without removing human control.</h2>
 
           <p>
-            Hospitality teams lose time managing enquiries, reservations,
-            customer follow-up, internal communication and reporting.
+            Incoming enquiries are analysed and structured automatically.
+            The system prepares a response for staff review and records the
+            enquiry for follow-up.
           </p>
 
-          <p style="margin-top: 18px;">
-            We build focused systems that make these processes simpler and
-            more reliable.
-          </p>
+          <div class="process">
+            Analyse → Structure → Draft → Review → Record
+          </div>
         </div>
-      </div>
-    </section>
-
-    <section>
-      <div class="container">
-        <div class="eyebrow">What we build</div>
 
         <div class="grid">
           <article class="card">
-            <h3>Customer enquiries</h3>
-            <p>Organise requests and support faster responses.</p>
+            <h3>Understand enquiries</h3>
+            <p>
+              Identifies relevant requests and extracts the important details.
+            </p>
           </article>
 
           <article class="card">
-            <h3>Reservations</h3>
-            <p>Collect information and structure booking workflows.</p>
+            <h3>Prepare responses</h3>
+            <p>
+              Creates a contextual draft for staff review.
+            </p>
           </article>
 
           <article class="card">
-            <h3>Internal operations</h3>
-            <p>Connect teams, tools and recurring tasks.</p>
-          </article>
-
-          <article class="card">
-            <h3>Reporting and follow-up</h3>
-            <p>Create clearer summaries and improve customer communication.</p>
+            <h3>Keep records</h3>
+            <p>
+              Logs enquiries consistently for operational follow-up.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="links-section">
       <div class="container">
-        <div class="eyebrow">Part of Nexus Prima</div>
-
-        <h2>Understanding complex systems. Building better ones.</h2>
-
-        <div class="intro">
-          <p>
-            Nexus Prima studies and builds complex systems.
-          </p>
-
-          <p style="margin-top: 18px;">
-            The Journal explores civilisation, science, artificial intelligence
-            and space. Nexus Prima Systems applies the same systems approach to
-            practical organisational problems.
-          </p>
-        </div>
-
         <div class="links">
           <a class="text-link" href="https://nexusprima.org">
             Visit Nexus Prima
@@ -392,12 +396,14 @@
       <div class="container">
         <div class="eyebrow">Request a pilot</div>
 
-        <h2>What repetitive process slows your business down?</h2>
+        <h2>
+          Put the Hotel Enquiry Assistant into a real operational environment.
+        </h2>
 
         <div class="intro">
           <p>
-            Tell us what currently takes too much time. We will explore whether
-            a practical system can improve it.
+            We are working with early hospitality partners to test and refine
+            the system in practice.
           </p>
         </div>
 
@@ -414,6 +420,7 @@
 
   <footer>
     <div class="container footer-content">
+
       <div>
         <div class="wordmark">
           NEXUS <span>PRIMA</span> SYSTEMS
@@ -422,15 +429,22 @@
         <p class="footer-copy">
           Practical systems for real operations.
         </p>
+
+        <p class="footer-copy">
+          <a href="mailto:contact@nexusprima.org">
+            contact@nexusprima.org
+          </a>
+        </p>
       </div>
 
-      <div>
-        <a href="mailto:contact@nexusprima.org">
-          contact@nexusprima.org
-        </a>
-
-        <p class="footer-copy">© 2026 Nexus Prima</p>
+      <div class="legal">
+        <strong>NEXUS PRIMA SYSTEMS LIMITED</strong><br>
+        Registered in England and Wales · Company No. 17391280<br>
+        Registered Office: 167–169 Great Portland Street, 5th Floor,
+        London W1W 5PF, United Kingdom<br><br>
+        © 2026 Nexus Prima Systems Limited. All rights reserved.
       </div>
+
     </div>
   </footer>
 
