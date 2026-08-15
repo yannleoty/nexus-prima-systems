@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-label="Nexus Prima symbol">
+  <!-- Transparent background -->
+  <!-- Thin dark-grey outer circle -->
+  <circle cx="50" cy="50" r="46" fill="none" stroke="#505057" stroke-width="2" vector-effect="non-scaling-stroke"/>
+
+  <!-- Large white outlined hexagon -->
+  <polygon points="50,6 88,29 88,71 50,94 12,71 12,29" fill="none" stroke="#ffffff" stroke-width="3.5" stroke-linejoin="miter" stroke-linecap="butt" vector-effect="non-scaling-stroke"/>
+
+  <!-- Smaller silver/light-grey outlined hexagon -->
+  <polygon points="50,26 72,40 72,60 50,74 28,60 28,40" fill="none" stroke="#b8b8bd" stroke-width="3" stroke-linejoin="miter" stroke-linecap="butt" vector-effect="non-scaling-stroke"/>
+
+  <!-- Solid red circle exactly centred -->
+  <circle cx="50" cy="50" r="7.5" fill="#d63c46"/>
+</svg>
